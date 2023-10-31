@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Dont Click | Horror Game</title>
+</head>
+<body>
+
+    <div id="Main-Container">
+
+        <!-- Blur Background -->
+        <div id="background-blur"></div>
+
+        <!-- Name Box -->
+        <div id="name-box">
+            <div id="error">
+                <h2>here you type your name</h2>
+            </div>
+            <input type="text" name="name" id="name" required placeholder="Enter Your Name">
+            <input type="submit" name="submit" id="submit">
+            <div id="close-btn">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Home Page of Game -->
+        <div id="home-page">
+            <div id="logo-box">
+                <h1>Dont Click !</h1>
+            </div>
+        
+            <div id="menu-box">
+                <span id="play">PLAY</span>
+                <span id="quit">QUIT</span>
+            </div>
+        </div>
+
+        <!-- Waiting Page before start the game -->
+        <div id="waiting-box">
+            <div id="wait"></div>
+        </div>
+
+    </div>
+
+    <!-- Main Screen when playing game-->
+    <div id="playing-Screen">
+        <video id="videoPlayer">
+            <source src="video/one.mp4" type="video/mp4">
+            Something Went Wrong With you Browser !
+        </video>
+    </div>
+    <div id="gost-box">
+        <img src="img/gost.png">
+    </div>
+
+</body>
+</html>
+
+

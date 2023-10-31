@@ -1,0 +1,292 @@
+@font-face {
+    font-family: primary;
+    src: url(fonts/primary.woff);
+}
+@font-face {
+    font-family: secondary;
+    src: url(fonts/secondary.woff);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+    color: #fff;
+    font-family: secondary;
+    cursor: default !important;
+    text-decoration: none;
+}
+::selection{
+    background: transparent;
+}
+body{
+    background-color: black;
+    font-size: 100%;
+}
+
+
+
+
+/* background-blur */
+#background-blur{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    opacity: 0.5;
+}
+
+
+/* name-box */
+#name-box{
+    display: grid;
+    align-items: center;
+    align-content: center;
+    grid-gap: 30px 0px;
+    height: 50vh;
+    width: 50%;
+    position: fixed;
+    left: 25%;
+    top: 25vh;
+    background: #2f3640;
+    z-index: 99;
+}
+#name-box #error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#name-box #error h2{
+    letter-spacing: 5px;
+}
+#name-box>input{
+    background: none;
+    letter-spacing: 5px;
+    margin: auto;
+    padding: 5px 20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+#name-box #name{
+    width: 50%;
+    outline: none;
+    border: 2px solid #fff;
+}
+#name-box #name:focus{
+    border: 2px dashed #fff;
+}
+#name-box #submit{
+    border: none;
+    background: #27ae60;
+}
+#name-box #submit:hover{
+    background: #2ecc71;
+}
+#name-box #close-btn{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    box-sizing: content-box !important;
+    padding: 3px;
+    height: 20px;
+    width: 20px;
+}
+#name-box #close-btn:hover{
+    background: hwb(0 27% 15%);
+}
+#name-box #close-btn span{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 1px solid hwb(0 27% 15%);
+    transform: rotate(45deg);
+}
+#name-box #close-btn:hover span{
+    border: 1px solid #fff;
+}
+#name-box #close-btn span:nth-child(1){
+    width: 100%;
+    top: calc(50% - 1px);
+}
+#name-box #close-btn span:nth-child(2){
+    left: calc(50% - 1px);
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+ /* home-page */
+#home-page{
+    background-image: url('https://wallpapers.com/images/featured/most-scary-igrpjgikitgrj8x1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+#logo-box{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: 10px;
+}
+#logo-box h1{
+    font-size: 5rem;
+    font-family: primary;
+    color: hsl(0, 53%, 23%);
+    margin-top: 25%;
+    animation-name: updown;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes updown{
+    50%{transform: translateY(20px)};
+    50%{transform: translateY(-20px)};
+}
+#menu-box{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 30%;
+    padding: 10px;
+}
+#menu-box span{
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    margin: 15px 0px;
+    padding: 5px 20px;
+    border: 2px groove #fff;
+    box-shadow: 0px 0px 20px 5px black;
+}
+#menu-box span:hover{
+    color: #d4d4d4;
+    box-shadow: 0px 0px 10px 5px black;
+}
+#menu-box span:active{
+    box-shadow: 0px 0px 10px 10px black;
+}
+
+
+
+
+
+
+
+
+
+
+/* waiting-box */
+#waiting-box{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    scale: 0;
+    box-shadow: 0px 0px 50px 50px #000;
+    border-radius: 50%;
+    transition: all ease-in-out 0.3s !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+#waiting-box #wait{
+    font-size: 2rem;
+    letter-spacing: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* Playing Screen */
+#playing-Screen{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#playing-Screen video{
+    height: 100vh;
+    width: 100%;
+    letter-spacing: 5px;
+    object-fit: cover;
+}
+#gost-box{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    display: none;
+}
+#gost-box img{ 
+    margin: auto;
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    left: calc(50% - 200px);
+    top: calc(50% - 200px);
+    scale: 0;
+    transition: all ease-in-out 0.1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Only PC Game No working on Phone */
+@media screen and (max-width:800px){
+    div{
+        display: none !important;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body::after{
+        content: 'Play on 800px Resolution screen';
+        font-family: Arial, Helvetica, sans-serif;
+        color:  hsl(0, 53%, 23%);
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
